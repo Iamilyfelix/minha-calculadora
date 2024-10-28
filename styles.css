@@ -1,0 +1,21 @@
+body.custom-body {
+    background-color: #bcd4ec; /* Cor de fundo */
+    display: flex;              /* Layout flexível */
+    justify-content: center;    /* Centralizar conteúdo horizontalmente */
+    align-items: center;        /* Centralizar conteúdo verticalmente */
+    height: 100vh;             /* Altura da tela inteira */
+}
+.cal.custom-container {
+    padding: 1.5rem;           /* Espaçamento interno */
+    background-color: white;    /* Cor de fundo do container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do container */
+    border-radius: 0.25rem;     /* Bordas arredondadas */
+    max-width: 400px;           /* Largura máxima */
+}
+.btn-custom{
+    background-color: #bcd4ec;
+    margin-top: 10px;
+    border: none;
+    border-radius: 2px;
+
+}

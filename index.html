@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="custom-body">
+    <div class="cal custom-container">
+        <h1 class="text-center mb-4">Minha calculadora</h1>
+        <label for="n1" class="form-label">Digite um número:</label>
+        <input id="n1" type="number" class="form-control"/>
+
+        <label for="n2" class="form-label">Digite outro número:</label>
+        <input id="n2" type="number" class="form-control"/>
+
+        <div>
+            <button onclick="somar()" class="btn-custom">Somar</button>
+            <button onclick="subtrair()" class="btn-custom">Subtrair</button>
+            <button onclick="multiplicar()" class="btn-custom">Multiplicar</button>
+            <button onclick="dividir()" class="btn-custom">Dividir</button>
+            <button onclick="limpar()" class="btn-custom">Limpar</button>
+        </div>
+        
+        <p class="mt-4 text-center">O resultado é: <span id="res"></span></p>
+    
+        <script>
+            var n1=document.querySelector('#n1')
+            var n2=document.querySelector('#n2')
+            var resultado=document.querySelector('#res')
+
+            function somar() {
+                if(validarEntradas()){
+                    resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+                }
+            }
+
+            function subtrair() {
+                if(validarEntradas()){
+                    resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+                }
+            }
+
+            function multiplicar() {
+                if(validarEntradas()){
+                    resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+                }
+            }
+
+            function dividir() {
+                if(validarEntradas()){
+                    if (parseInt(n2.value) === 0){
+                        resultado.innerHTML="Não é possível dividir por zero";
+                    }
+                    else{
+                    resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+                    }
+                }
+            }
+
+            function limpar() {
+            n1.value = '';
+            n2.value = '';
+            resultado.innerHTML = '';
+            }
+            function validarEntradas() {
+                if (!n1.value || !n2.value) {
+                    resultado.innerHTML = "Por favor, preencha ambos os números.";
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </div>
+</body>
+</html>
