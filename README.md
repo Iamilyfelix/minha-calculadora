@@ -4,6 +4,9 @@ Este é um projeto de uma **Calculadora Responsiva** desenvolvida para estudar *
 
 A calculadora permite ao usuário realizar operações básicas, como soma, subtração, multiplicação e divisão. O design é responsivo, adaptando-se a diferentes tamanhos de tela, tornando-a utilizável em dispositivos móveis e desktop.
 
+## Prévia do Projeto
+- https://iamilyfelix.github.io/minha-calculadora/
+
 ## Funcionalidades
 
 - Digitar dois números.
